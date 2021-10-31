@@ -80,7 +80,7 @@ const config = {
     }),
     new webpack.EnvironmentPlugin({
       BUILD_TARGET: "web",
-      API_ENDPOINT: "https://api.tabliss.io/v1",
+      API_ENDPOINT: "https://api.artiss.io/v1",
       SENTRY_PUBLIC_DSN: null,
       GIPHY_API_KEY: null,
       UNSPLASH_API_KEY: null,
@@ -124,7 +124,7 @@ if (!isWeb && !isProduction) {
 if (isWeb) {
   config.plugins.push(
     new workbox.GenerateSW({
-      cacheId: "tabliss-cache",
+      cacheId: "artiss-cache",
       dontCacheBustURLsMatching: /\.\w{12}\./,
     }),
   );

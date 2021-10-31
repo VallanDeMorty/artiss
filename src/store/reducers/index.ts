@@ -7,7 +7,6 @@ import { cacheStorage, dataStorage } from "../storage";
 import { store } from "../store";
 import { cache } from "./cache";
 import { data } from "./data";
-import { ui } from "./ui";
 
 function writeFailHandler(err: Error) {
   captureException(err);
@@ -24,7 +23,6 @@ const config = (key: string, storage: Storage) => ({
 });
 
 export default combineReducers({
-  ui,
   cache: persistReducer(config("cache", cacheStorage), cache),
   data: persistReducer(config("data", dataStorage), data),
 });

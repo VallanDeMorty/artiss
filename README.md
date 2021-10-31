@@ -1,20 +1,18 @@
-# Tabliss
+# Artiss
 
-A pluggable New Tab web extension written in TypeScript, React and Redux.
-
-[https://tabliss.io](https://tabliss.io)
+An artstation tab web extension
 
 ## Usage
 
-Install dependencies with `npm install` before running the following scripts.
+Install dependencies with `yarn install` before running the following scripts.
 
-- `npm run dev[:target]` Local development server
-- `npm run build[:target]` Production build
-- `npm run translations` Manage translation files
+- `yarn dev[:target]` Local development server
+- `yarn build[:target]` Production build
+- `yarn translations` Manage translation files
 
 To develop with external services you will additionally need to signup for your own API keys
 and enter them into your `.env` file. Get started by copying the example provided `cp .env.example .env`.
 
-## Translations
+## Credits
 
-Checkout the guide to [adding translations](TRANSLATING.md).
+Bless Joel Shepherd and the community for the creating [https://github.com/joelshepherd/tabliss](Tabliss) which is the origin for Artiss, Arstation for the open API and huge thanks to the people who are making badass artworks.

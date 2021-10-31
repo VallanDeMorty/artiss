@@ -18,7 +18,6 @@ type Props = {
  *
  * Intl Issue information: https://github.com/formatjs/react-intl/issues/1577
  * Code based on: https://github.com/mattermost/mattermost-webapp/pull/5138
- * Tabliss issue: https://github.com/joelshepherd/tabliss/issues/231
  */
 const IntlTime: FC<Props> = ({
   hour12,

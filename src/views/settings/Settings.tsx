@@ -32,7 +32,7 @@ const Settings: FC = () => {
     document.body.appendChild(a);
     a.style.display = "none";
     a.href = url;
-    a.download = "tabliss.json";
+    a.download = "artiss.json";
     a.click();
     window.URL.revokeObjectURL(url);
     document.body.removeChild(a);
@@ -78,11 +78,11 @@ const Settings: FC = () => {
 
         <p>
           <a
-            href="https://www.paypal.me/tabliss"
+            href="https://www.paypal.me/artiss"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Love Tabliss? Donate 😍
+            Love Artiss? Donate 😍
           </a>
         </p>
 
@@ -93,25 +93,18 @@ const Settings: FC = () => {
         </p>
 
         <p>
-          <a href="https://tabliss.io/" target="_blank">
+          <a href="https://artiss.io/" target="_blank">
             <Icon name="globe" />
           </a>
           &nbsp;&nbsp;
           <a
-            href="https://twitter.com/tabliss"
+            href="https://twitter.com/artiss"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Icon name="twitter" />
           </a>
           &nbsp;&nbsp;
-          <a
-            href="https://github.com/joelshepherd/tabliss"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="github" />
-          </a>
         </p>
 
         <FormattedMessage

@@ -5,34 +5,34 @@ describe("links/reducer()", () => {
   it("should add new links", () => {
     expect(reducer([], addLink())).toEqual([{ url: "https://" }]);
     expect(
-      reducer([{ url: "https://tabliss.io/" }], { type: "ADD_LINK" }),
-    ).toEqual([{ url: "https://tabliss.io/" }, { url: "https://" }]);
+      reducer([{ url: "https://artiss.io/" }], { type: "ADD_LINK" }),
+    ).toEqual([{ url: "https://artiss.io/" }, { url: "https://" }]);
   });
 
   it("should remove links", () => {
     expect(
       reducer(
         [
-          { url: "https://tabliss.io/" },
-          { url: "https://tabliss.io/about.html" },
+          { url: "https://artiss.io/" },
+          { url: "https://artiss.io/about.html" },
         ],
         removeLink(0),
       ),
-    ).toEqual([{ url: "https://tabliss.io/about.html" }]);
+    ).toEqual([{ url: "https://artiss.io/about.html" }]);
   });
 
   it("should update links", () => {
     expect(
       reducer(
         [
-          { url: "https://tabliss.io/" },
-          { url: "https://tabliss.io/about.html" },
+          { url: "https://artiss.io/" },
+          { url: "https://artiss.io/about.html" },
         ],
-        updateLink(0, { name: "Tabliss", url: "https://tabliss.io/" }),
+        updateLink(0, { name: "Artiss", url: "https://artiss.io/" }),
       ),
     ).toEqual([
-      { name: "Tabliss", url: "https://tabliss.io/" },
-      { url: "https://tabliss.io/about.html" },
+      { name: "Artiss", url: "https://artiss.io/" },
+      { url: "https://artiss.io/about.html" },
     ]);
   });
 
@@ -40,31 +40,31 @@ describe("links/reducer()", () => {
     expect(
       reducer(
         [
-          { url: "https://tabliss.io/" },
-          { url: "https://tabliss.io/about.html" },
-          { url: "https://tabliss.io/support.html" },
+          { url: "https://artiss.io/" },
+          { url: "https://artiss.io/about.html" },
+          { url: "https://artiss.io/support.html" },
         ],
         reorderLink(1, 0),
       ),
     ).toEqual([
-      { url: "https://tabliss.io/about.html" },
-      { url: "https://tabliss.io/" },
-      { url: "https://tabliss.io/support.html" },
+      { url: "https://artiss.io/about.html" },
+      { url: "https://artiss.io/" },
+      { url: "https://artiss.io/support.html" },
     ]);
 
     expect(
       reducer(
         [
-          { url: "https://tabliss.io/" },
-          { url: "https://tabliss.io/about.html" },
-          { url: "https://tabliss.io/support.html" },
+          { url: "https://artiss.io/" },
+          { url: "https://artiss.io/about.html" },
+          { url: "https://artiss.io/support.html" },
         ],
         reorderLink(1, 2),
       ),
     ).toEqual([
-      { url: "https://tabliss.io/" },
-      { url: "https://tabliss.io/support.html" },
-      { url: "https://tabliss.io/about.html" },
+      { url: "https://artiss.io/" },
+      { url: "https://artiss.io/support.html" },
+      { url: "https://artiss.io/about.html" },
     ]);
   });
 

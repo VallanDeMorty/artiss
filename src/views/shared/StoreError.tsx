@@ -21,13 +21,13 @@ const StoreError: FC<Props> = ({ error }) => {
       <h2>Storage Error</h2>
 
       <p>
-        Tabliss is unable to save your settings. This may happen because Tabliss
+        Artiss is unable to save your settings. This may happen because Artiss
         does not have permission to store data, or that your settings data is
         too large.
       </p>
       <p>
-        Resetting to default or reinstalling Tabliss may help. Otherwise contact{" "}
-        <a href="mailto:support@tabliss.io">support@tabliss.io</a> if you are
+        Resetting to default or reinstalling Artiss may help. Otherwise contact{" "}
+        <a href="mailto:support@artiss.io">support@artiss.io</a> if you are
         unable to solve the issue.
       </p>
       <pre>
@@ -35,7 +35,7 @@ const StoreError: FC<Props> = ({ error }) => {
       </pre>
 
       <button onClick={handleAccept}>Okay</button>
-      <button onClick={handleReset}>Reset Tabliss</button>
+      <button onClick={handleReset}>Reset Artiss</button>
     </Modal>
   );
 };

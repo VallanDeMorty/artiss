@@ -95,7 +95,7 @@ class Feedback extends React.PureComponent<{}, State> {
       })
       .catch(() => {
         alert(
-          "Sorry, we were unable to send your feedback :( Please email your feedback to feedback@tabliss instead.",
+          "Sorry, we were unable to send your feedback :( Please email your feedback to feedback@artiss instead.",
         );
         this.setState({ pending: false });
       });

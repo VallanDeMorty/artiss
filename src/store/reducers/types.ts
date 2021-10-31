@@ -7,25 +7,6 @@ export type BackgroundDisplay = {
   luminosity: number;
 };
 
-export type WidgetPosition =
-  | "topLeft"
-  | "topCentre"
-  | "topRight"
-  | "middleLeft"
-  | "middleCentre"
-  | "middleRight"
-  | "bottomLeft"
-  | "bottomCentre"
-  | "bottomRight";
-
-export type WidgetDisplay = {
-  colour?: string;
-  fontFamily?: string;
-  fontSize?: number;
-  fontWeight?: number;
-  position: WidgetPosition;
-};
-
 type PluginState<Display> = {
   id: string;
   /**
@@ -39,11 +20,8 @@ type PluginState<Display> = {
 
 export type BackgroundState = PluginState<BackgroundDisplay>;
 
-export type WidgetState = PluginState<WidgetDisplay>;
-
 export type DataState = {
   backgrounds: BackgroundState[];
-  widgets: WidgetState[];
   data: {
     [id: string]: object;
   };

@@ -27,7 +27,7 @@ export interface Version1Config {
 }
 
 /**
- * Migrate Tabliss v1 config to v2
+ * Migrate Artiss v1 config to v2
  */
 export function migrateVersion1(config: Version1Config): DataState {
   // Data

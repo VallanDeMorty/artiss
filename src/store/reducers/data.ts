@@ -12,20 +12,6 @@ export const initialState: DataState = {
       display: { luminosity: -0.1, blur: 0 },
     },
   ],
-  widgets: [
-    {
-      id: generateId(),
-      key: "widget/time",
-      active: true,
-      display: { position: "middleCentre" },
-    },
-    {
-      id: generateId(),
-      key: "widget/greeting",
-      active: true,
-      display: { position: "middleCentre" },
-    },
-  ],
   data: {},
 };
 
@@ -47,33 +33,6 @@ export function data(state = initialState, action: Actions): DataState {
         ],
       };
 
-    case "ADD_WIDGET":
-      return {
-        ...state,
-        widgets: state.widgets.concat({
-          id: generateId(),
-          key: action.data.key,
-          active: true,
-          display: { position: "middleCentre" },
-        }),
-      };
-
-    case "REMOVE_WIDGET":
-      return {
-        ...state,
-        widgets: state.widgets.filter((plugin) => plugin.id !== action.data.id),
-      };
-
-    case "REORDER_WIDGET":
-      const widgets = [...state.widgets];
-      const index = widgets.findIndex((widget) => widget.id === action.data.id);
-      widgets.splice(action.data.to, 0, widgets.splice(index, 1)[0]);
-
-      return {
-        ...state,
-        widgets,
-      };
-
     case "SET_DATA":
       return {
         ...state,
@@ -88,19 +47,6 @@ export function data(state = initialState, action: Actions): DataState {
         ...state,
         backgrounds: state.backgrounds.map((plugin) =>
           plugin.active
-            ? {
-                ...plugin,
-                display: { ...plugin.display, ...action.data.display },
-              }
-            : plugin,
-        ),
-      };
-
-    case "SET_WIDGET_DISPLAY":
-      return {
-        ...state,
-        widgets: state.widgets.map((plugin) =>
-          plugin.id === action.data.id
             ? {
                 ...plugin,
                 display: { ...plugin.display, ...action.data.display },

@@ -1,4 +1,4 @@
-import { BackgroundDisplay, WidgetDisplay } from "../reducers/types";
+import { BackgroundDisplay } from "../reducers/types";
 
 export function setBackground(key: string, from?: string) {
   return {
@@ -56,13 +56,6 @@ export function setTimeZone(timeZone?: string) {
   } as const;
 }
 
-export function setWidgetDisplay(id: string, display: Partial<WidgetDisplay>) {
-  return {
-    type: "SET_WIDGET_DISPLAY",
-    data: { id, display },
-  } as const;
-}
-
 export type DataActions =
   | ReturnType<typeof setBackground>
   | ReturnType<typeof addWidget>
@@ -71,5 +64,4 @@ export type DataActions =
   | ReturnType<typeof setData>
   | ReturnType<typeof setBackgroundDisplay>
   | ReturnType<typeof setLocale>
-  | ReturnType<typeof setTimeZone>
-  | ReturnType<typeof setWidgetDisplay>;
+  | ReturnType<typeof setTimeZone>;

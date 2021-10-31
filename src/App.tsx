@@ -10,7 +10,7 @@ import WelcomeTo2 from "./views/shared/welcomes/WelcomeTo2";
 const messages = defineMessages({
   pageTitle: {
     id: "app.pageTitle",
-    description: "Page title that Tabliss displays in the title bar.",
+    description: "Page title that Artiss displays in the title bar.",
     defaultMessage: "New Tab",
   },
 });

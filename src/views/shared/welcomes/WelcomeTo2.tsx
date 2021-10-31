@@ -9,7 +9,7 @@ import Logo from "../Logo";
 
 function getOldStore() {
   return localForage.createInstance({
-    name: "tabliss",
+    name: "artiss",
     storeName: "state",
   });
 }
@@ -54,7 +54,7 @@ const WelcomeTo2: FC = () => {
     <Modal>
       <Logo />
       <div className="Settings">
-        <h2 style={{ textAlign: "center" }}>Welcome to Tabliss 2!</h2>
+        <h2 style={{ textAlign: "center" }}>Welcome to Artiss 2!</h2>
         <div style={{ fontSize: "1.1em" }}>
           <p>One year in the making, some new feature highlights:</p>
           <ul style={{ color: "#212121" }}>
@@ -65,7 +65,7 @@ const WelcomeTo2: FC = () => {
             <li>New widgets and translations</li>
           </ul>
           <p>
-            Your settings need to be migrated to Tabliss 2. Not everything
+            Your settings need to be migrated to Artiss 2. Not everything
             <br />
             is 100% compatible, so I apologise if there is anything missing.
             <br />
